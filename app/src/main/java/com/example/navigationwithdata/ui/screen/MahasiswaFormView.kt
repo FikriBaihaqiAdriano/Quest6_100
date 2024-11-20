@@ -19,6 +19,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Person
+import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
@@ -158,7 +159,9 @@ fun MahasiswaFormView(
                 Row (modifier = Modifier.padding(16.dp),
                     horizontalArrangement = Arrangement.SpaceEvenly)
                 {
-
+                    Button(onClick = { onBackButtonClicked ()}) {
+                        Text(text = "Kembali")
+                    }
                 }
             }
         }
