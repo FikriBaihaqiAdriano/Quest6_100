@@ -15,6 +15,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.Icon
@@ -101,37 +102,59 @@ fun MahasiswaFormView(
                     value = nim,
                     onValueChange = { nim = it },
                     label = { Text(text = "Nomor Induk Mahasiswa") },
-                    LoadingIcon = {
+                    leadingIcon = {
                         Icon(
                             imageVector = Icons.Filled.Info,
                             contentDescription =""
                         )
                     },
-                    keyboardOptions = KeyboardOptions (
+                    keyboardOptions = KeyboardOptions(
                         keyboardType = KeyboardType.Number,
                         imeAction = ImeAction.Next
                     ),
-                    singgleLine = true,
+                    singleLine = true,
                     shape = RoundedCornerShape(50.dp)
                 )
+                Spacer(modifier = Modifier.padding(4.dp))
                 OutlinedTextField(
                     modifier = Modifier.fillMaxWidth(),
                     value = nama,
-                    onValueChange = { nim = it },
+                    onValueChange = { nama = it },
                     label = { Text(text = "Nama Mahasiswa") },
-                    LoadingIcon = {
+                    leadingIcon = {
                         Icon(
                             imageVector = Icons.Filled.Person,
                             contentDescription =""
                         )
                     },
-                    keyboardOptions = KeyboardOptions (
+                    keyboardOptions = KeyboardOptions(
                         keyboardType = KeyboardType.Text,
                         imeAction = ImeAction.Next
                     ),
-                    singgleLine = true,
+                    singleLine = true,
                     shape = RoundedCornerShape(50.dp)
                 )
+                Spacer(modifier = Modifier.padding(4.dp))
+                OutlinedTextField(
+                    modifier = Modifier.fillMaxWidth(),
+                    value = email,
+                    onValueChange = { email = it },
+                    label = { Text(text = "Email Mahasiswa") },
+                    leadingIcon = {
+                        Icon(
+                            imageVector = Icons.Filled.Email,
+                            contentDescription =""
+                        )
+                    },
+                    keyboardOptions = KeyboardOptions(
+                        keyboardType = KeyboardType.Email,
+                        imeAction = ImeAction.Next
+                    ),
+                    singleLine = true,
+                    shape = RoundedCornerShape(50.dp)
+                )
+                Spacer(modifier = Modifier.padding(4.dp))
+
             }
         }
 
