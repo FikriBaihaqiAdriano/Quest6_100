@@ -3,6 +3,7 @@ package com.example.navigationwithdata.ui.screen
 import android.widget.Space
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -154,7 +155,8 @@ fun MahasiswaFormView(
                     shape = RoundedCornerShape(50.dp)
                 )
                 Spacer(modifier = Modifier.padding(4.dp))
-                Row (modifier = Modifier.padding(16.dp))
+                Row (modifier = Modifier.padding(16.dp),
+                    horizontalArrangement = Arrangement.SpaceEvenly)
                 {
 
                 }
