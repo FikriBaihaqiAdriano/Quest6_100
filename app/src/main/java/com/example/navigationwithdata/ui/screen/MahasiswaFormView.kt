@@ -162,6 +162,9 @@ fun MahasiswaFormView(
                     Button(onClick = { onBackButtonClicked ()}) {
                         Text(text = "Kembali")
                     }
+                    Button(onClick = { onSubmitButtonClicked(listData) }) {
+                        Text(text = "Simpan")
+                    }
                 }
             }
         }
