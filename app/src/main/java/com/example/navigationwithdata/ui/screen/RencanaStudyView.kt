@@ -17,7 +17,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material3.Button
 import androidx.compose.material3.Checkbox
-
 import androidx.compose.material3.Icon
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
@@ -141,19 +140,19 @@ fun RencanaStudyView(
                 )
                 Spacer(modifier = Modifier.padding(8.dp))
                 Row (
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceEvenly
-                ){
-                    RuangKelas.listKelas.forEach { data ->
-                        Row (
                             modifier = Modifier.fillMaxWidth(),
                             horizontalArrangement = Arrangement.SpaceEvenly
-                        ){
-                            RadioButton(selected = pilihanKelas == data, onClick = { pilihanKelas = data })
-                            Text(data)
+                        ) {
+                            RuangKelas.listKelas.forEach() { listData ->
+                                Row (verticalAlignment = Alignment.CenterVertically) {
+                                    RadioButton(
+                                        selected = pilihanKelas == listData,
+                                        onClick = { pilihanKelas = listData }
+                                    )
+                                    Text(listData)
+                                }
+                            }
                         }
-                    }
-                }
                 Spacer(modifier = Modifier.padding(8.dp))
 
                 Spacer(modifier = Modifier.padding(8.dp))
